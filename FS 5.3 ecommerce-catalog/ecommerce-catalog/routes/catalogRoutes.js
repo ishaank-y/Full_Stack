@@ -1,0 +1,10 @@
+import express from "express";
+import { createProduct, getProduct, getProducts, updateProduct, deleteProduct, facets } from "../controllers/catalogController.js";
+const router = express.Router();
+router.post("/", createProduct);
+router.get("/", getProducts);
+router.get("/facets", facets);
+router.get("/:slug", getProduct);
+router.put("/:slug", updateProduct);
+router.delete("/:slug", deleteProduct);
+export default router;
