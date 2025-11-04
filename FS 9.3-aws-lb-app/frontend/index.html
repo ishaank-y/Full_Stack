@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ByteXL Full-Stack — ALB</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>ByteXL: AWS ALB Demo</h1>
+    <p>Status: <span id="status">checking…</span></p>
+
+    <form id="msgForm">
+      <input id="msgInput" placeholder="Type a message…" />
+      <button type="submit">Add</button>
+    </form>
+
+    <h2>Messages</h2>
+    <ul id="messages"></ul>
+    <footer>
+      <small>Backend: <code>/api</code> via Nginx → Express</small>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
