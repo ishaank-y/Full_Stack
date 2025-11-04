@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CI/CD Demo App</title>
+</head>
+<body>
+  <h1>Welcome to CI/CD Demo App</h1>
+  <p id="msg">Loading message...</p>
+  <script>
+    fetch('/api').then(res => res.json()).then(data => {
+      document.getElementById('msg').textContent = data.message;
+    });
+  </script>
+</body>
+</html>
