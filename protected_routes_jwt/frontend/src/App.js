@@ -1,0 +1,1 @@
+import React,{useState}from'react';import Login from'./Login';import Protected from'./Protected';export default function App(){const[token,setToken]=useState(localStorage.getItem('token'));return(<div><h1>ByteXL Demo — Protected Routes with JWT</h1>{!token?<Login onLogin={setToken}/>:<Protected token={token} onLogout={()=>setToken(null)}/>}</div>);}
